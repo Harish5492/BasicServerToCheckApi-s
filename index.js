@@ -12,7 +12,7 @@ new Promise(async (resolve, reject) => {
   try {
     response = await axios.get('https://pro-api.coinmarketcap.com/v1/cryptocurrency/map', {
       headers: {
-        'X-CMC_PRO_API_KEY': '47bbfced-ac0e-4803-8f7f-1bdbccd91b88',
+        'X-CMC_PRO_API_KEY': process.env.CMC_PRO_API_KEY,
       },
     });
   } catch(ex) {
